@@ -132,6 +132,11 @@ button {
   text-decoration: none;
   color: var(--dark-grey);
 }
+.price-block {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
 /* Styles for product lists */
 .product-card {
   flex: 1 1 45%;
@@ -139,6 +144,10 @@ button {
   padding: 0.5em;
   border: 1px solid var(--light-grey);
   max-width: 250px;
+}
+.retail-price {
+  color: red;
+  text-decoration: line-through
 }
 .product-card h2,
 .product-card h3,
