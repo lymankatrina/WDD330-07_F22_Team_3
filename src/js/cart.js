@@ -3,10 +3,14 @@ function getLocalStorage(key) {
 }
 
 function getCartContents() {
-  let markup = "";
-  const cartItems = getLocalStorage("so-cart");
-  const htmlItems = cartItems.map((item) => renderCartItem(item));
-  document.querySelector(".product-list").innerHTML = htmlItems.join("");
+  let markup = '';
+  const cartItems = getLocalStorage('so-cart');
+  if (cartItems) {
+    const htmlItems = cartItems.map((item) => renderCartItem(item));
+    document.querySelector('.product-list').innerHTML = htmlItems.join('');
+  } else {
+    document.querySelector('.product-list').innerHTML = '<li>Cart is empty!</li>';
+  }
   // document.querySelector(".product-list").innerHTML = renderCartItem(cartItems);
 }
 
